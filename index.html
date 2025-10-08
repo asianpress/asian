@@ -6,6 +6,86 @@
     <title>Asian Press | Precision Printing, Unrivaled Quality</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+/* ------------------------------------------- */
+/* MOBILE SPECIFIC STYLES: max-width 768px */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* 1. HEADER: Stack Nav items vertically and hide button */
+    header div {
+        flex-direction: column; /* Stack logo, nav, and button */
+        align-items: center;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    nav {
+        order: 2; /* Move navigation links below the logo */
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack individual nav links */
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0 !important; /* Add space between stacked links */
+    }
+
+    /* Hide "Get a Free Quote" button on small screens to save space */
+    header a[href="#contact"] {
+        display: none !important; 
+    }
+
+    /* 2. HERO: Adjust font sizes to fit better */
+    #home h1 {
+        font-size: 2.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    #home p {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* 3. ABOUT SECTION: Change grid to a single column */
+    #about > div {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Make the image full width on mobile */
+    #about img {
+        width: 100% !important;
+        margin: 0 auto !important; /* Center the image */
+    }
+
+    /* 4. SERVICE SECTION: Allow services to stack */
+    #services > div > div {
+        /* This already uses auto-fit, but we ensure columns are smaller */
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important;
+    }
+
+    /* 5. PORTFOLIO SECTION: Reduce to 2 columns for visibility */
+    #portfolio > div > div:nth-child(1) {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Force the portfolio grid to 2 columns on mobile */
+    #portfolio > div > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* 6. FOOTER: Stack all three columns vertically */
+    footer > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+}
+
+</style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
